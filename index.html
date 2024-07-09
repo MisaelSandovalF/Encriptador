@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/d53937b053.js" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+    <title>Encriptador A</title>
+</head>
+
+<body onresize="resizeBrowser()">
+    <div class="wrapper">
+        <header>
+
+            <div class="header__img"><img src="recursos/Logo.png" alt="imagen de alura ( A )"></div>
+
+        </header>
+        <main>
+            <section class="encriptador">
+                <div class="encriptador__input-area">
+                    <div class="encriptador__input-area__divisor">
+                        <h1 class="input-area__title">Encriptador</h1>
+                        <textarea class="input-area__text-area" placeholder="Ingrese el texto aqui"></textarea>
+                    </div>
+                    <div>
+                        <small class="input-area__waring-text"> <i class="fa-solid fa-circle-exclamation"
+                                style="color: #495057;"></i> Solo letras minúsculas y sin acentos</small>
+                        <div class="input-area__buttons-container">
+                            <button onclick="activeModal()" class="input-area__buttons-container__button">
+                                Encriptar
+                            </button>
+                            <button class="input-area__buttons-container__button">
+                                Desencriptar
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="encriptador__ouput-area">
+                    <div class="output-area__container">
+                        <div class="output-area__container__divisor-img">
+                            <img id="muñeco" class="output-area__container__img" src="recursos/Muñeco.png" alt="muñeco">
+                            
+
+                            <div  id="output-text-area" class="p" >
+                                <textarea class="dinamic-text-area"></textarea>
+                                <button class="dinamic-button" >Copy</button>
+                            </div>
+                        
+
+                           
+                                <div id="dinamic-container-id" class=" container--dinamic-container">
+                                <dialog open class="moddal">
+                                    <button onclick="closeModal()" class="moddal__close-button" type="submit">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                    <textarea class="moddal__text-area"></textarea>
+        
+                                    <button class="moddal__copy-button">Copiar</button>
+                                </dialog>
+                            </div>
+                          
+
+                           
+
+                        </div>
+                        <div >
+                            <p class="output-area__name-developer">Misael sandoval</p>
+                            <small class="output-area__links"><i class="fa-brands fa-linkedin"></i><a
+                                    href="https://www.linkedin.com/in/misael-sandoval-fierro/">LinkedIn</a></small>
+                            <small class="output-area__links"><i class="fa-brands fa-github"></i><a
+                                    href="https://github.com/MisaelSandovalF">Github</a></small>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>

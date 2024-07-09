@@ -1,0 +1,496 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --main-color-text: #0A3871;
+    --secondary-color-text: #356EA9;
+    --auxiliary-color-text: #495057;
+    --external-color: #F3F5FC;
+    --black-text: #000;
+
+
+    --secundary-font-text: "Montserrat", sans-serif;
+
+}
+
+.wrapper {
+   
+    position: relative;
+    max-width: clamp(320px, 100%, 1600px);
+    height: 100dvh;
+    
+    /* height: 100dvh;
+   
+    background-color: red; */
+    background-color: var(--external-color);
+}
+
+.header__img {
+    text-align: end;
+ 
+    /* position: absolute;   
+    right: -15px;
+    top: 1rem; */
+
+}
+
+.header__img > img {
+    padding-top: 1rem;
+    width: 80px;
+    /**/
+/* 
+    margin: 1rem 0 0 0; */
+
+}
+
+/* ----------------  Main --------------------------*/
+
+.encriptador {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+    /* height: 100vh; Checar, si se lo quito se hace automatico */
+
+    /* background-color: aquamarine; */
+}
+
+/* ----------------  Input Text Area --------------------------*/
+.encriptador__input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* flex-grow: 1; */
+    padding: 1rem;
+ 
+    /* background-color: bisque; */
+}
+
+.input-area__title {
+    font-family: "Inter", sans-serif;
+    font-size: 2.2rem;
+    /* font-size: 2rem; */
+    font-weight: 500;
+
+    color: var(--main-color-text);
+}
+.encriptador__input-area__divisor{
+        
+    height: 250px;
+}
+.input-area__text-area {
+    border: none;
+    width: 100%;
+    height: 83%;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+    font-family: var(--secundary-font-text);
+    color: var(--secondary-color-text);
+    background-color: transparent;
+
+}
+
+.input-area__text-area::placeholder {
+    font-size: 1.5rem;
+  
+    color: var(--secondary-color-text);
+
+
+}
+
+.input-area__text-area:focus-visible {
+    outline: none;
+    /* padding: 0.5rem 0; */
+
+}
+
+
+.input-area__waring-text {
+    font-size: 0.8rem;
+    padding-left: 0.2rem;
+
+    color: var(--auxiliary-color-text);
+
+}
+
+.input-area__buttons-container {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 1rem;
+
+}
+
+.input-area__buttons-container__button {
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 80%;
+    color: white;
+    background-color: var(--main-color-text);
+}
+
+/* ----------------  Output Text Area --------------------------*/
+.encriptador__ouput-area {
+    /* flex-grow: 1; */
+   
+    font-family: var(--secundary-font-text);
+    
+    padding: 1rem;
+    /* background-color: lightcoral; */
+   
+   
+}
+
+
+.output-area__container {
+    text-align: center;
+    padding-bottom: 1rem;
+
+    background: linear-gradient(0deg, #757FB2 0%, #F3F5FC 100%);
+    box-shadow:  -12px 0 10px -3px rgba(31, 73, 125, 0.8), 12px 0 10px -3px rgba(31, 73, 125, 0.8)
+  
+    
+   
+}
+
+.output-area__container__img {
+    /* max-width: 300px; */
+    width: clamp(150px, 100%, 300px);
+    /* width: 65%; */
+    height: auto;
+
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    animation-iteration-count: infinite;
+    /* background-color: rebeccapurple; */
+}
+
+/*----------------------*/
+
+@keyframes myAnim {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, 2px);
+	}
+
+	80% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+
+/*----------------------*/
+
+
+.output-area__name-developer {
+
+    margin: 0.5rem;
+    color: var(--black-text);
+    
+}
+
+.output-area__links a {
+    text-decoration: none;
+    margin-right: 1rem;
+  
+    color: var(--black-text);
+
+}
+
+.output-area__links i {
+    margin-right: 0.3rem;
+  
+    color: var(--black-text);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* VENTANA MODAL*/
+
+.container--dinamic-container {
+    display: flex;
+   
+    position: absolute;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+  
+     
+ 
+     background-color: rgba(0, 0, 0, 0.534);
+     display: none;
+
+}
+.moddal{
+
+    
+
+
+
+     
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 1rem;
+    border-top-right-radius: 0.5rem;
+    width: 70%;
+    height: 49%;
+    /* margin-top: 40%; */
+ 
+
+   
+}
+.moddal__close-button{
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    border: 1px solid black;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.8rem;
+    background-color: var(--main-color-text);
+   
+}
+
+.moddal__text-area{
+    margin-top: 1rem;
+    width: 100%;
+    height: 90%;
+
+   
+}
+
+.moddal__copy-button{
+    width: 150px;
+    height: 3rem;
+    color: white;
+    
+    margin: 1rem auto 0 auto;
+    background-color: var(--main-color-text);
+    border-radius: 0.3rem;
+}
+
+
+.p{
+       
+    display: none ;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+
+.output-area__container{
+ 
+    /* margin: auto;
+    
+    border-left: 1px solid #ADB5BD;
+
+    color: #757FB2;
+
+    background: linear-gradient(0deg, #757FB2 0%, #F3F5FC 100%);
+    box-shadow:  -12px 0 10px -3px rgba(31, 73, 125, 0.8), 12px 0 10px -3px rgba(31, 73, 125, 0.8);; */
+}
+
+.output-area__container__divisor-img {
+
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    align-content: center;
+    width: 100%;
+    flex-grow: 1;
+
+   
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .wrapper {
+        /* display: flex;
+     align-items: center;
+     justify-content: center;
+     min-width: 1024px;
+     max-width: auto; */
+        align-content: center;
+        max-width: clamp(1024px, 1500px, 3000px);
+        margin: auto;
+
+
+    }
+
+
+
+    .encriptador {
+        /* justify-content: center;
+        flex-direction: row; */
+        margin: 2rem;
+        flex-direction: row;
+
+     
+
+
+
+    }
+
+    .encriptador__input-area,
+    .encriptador__ouput-area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: clamp(500px, 600px, 700px);
+        justify-content: space-between;
+
+        background-color: #E9ECF8;
+    }
+
+
+
+    .output-area__container {
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 2.5rem;
+
+    }
+
+    .output-area__container__divisor-img {
+
+        align-content: center;
+        width: 100%;
+        flex-grow: 1;
+
+
+
+    }
+
+
+
+    .output-area__container__img { 
+        display: inline-block;
+       
+        width: 300px;
+        max-width: clamp(200px, 350px, 500px);
+        height: auto;
+        /* position: absolute;
+        transform: translate(-50%, -50%);
+        width: auto;
+        top: 50%;
+        left: 50%; */
+    }
+
+    header {
+        display: none;
+    }
+    .input-area__title{
+        padding-bottom: 0.8rem;
+        font-size: 2.8rem;
+    }
+    .output-area__container {
+        margin: 0;
+    }
+
+    .container--dinamic-container {
+        display: none;
+    }
+
+    .encriptador__input-area__divisor{
+        
+        height: 70%;
+    }
+    .input-area__text-area{
+        width: 100%;
+        height: 90%;
+        font-size: 1.8rem;
+    }
+    .input-area__waring-text{
+        font-size: 1.5rem;
+        
+    }
+    .input-area__buttons-container__button{
+        
+        font-size: 2rem;
+        
+    }
+
+    .p{
+       
+        display: none t;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    .dinamic-text-area{
+        
+        margin: auto auto 0 auto;
+        width: 80%;
+        height: 80%;
+       
+    }
+
+    .dinamic-button{
+        width: 30%;
+        height: 2rem;
+        margin: 1.5rem 0 2rem 0;
+    }
+
+
+    /**/
+
+
+    .output-area__container{
+        height: 90%;
+        margin: auto;
+        width: 80%;
+        border-left: 1px solid #ADB5BD;
+
+        color: #757FB2;
+  
+        background: linear-gradient(0deg, #757FB2 0%, #F3F5FC 100%);
+        box-shadow:  -12px 0 10px -3px rgba(31, 73, 125, 0.8), 12px 0 10px -3px rgba(31, 73, 125, 0.8);;
+    }
+}
