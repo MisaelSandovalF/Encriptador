@@ -1,49 +1,47 @@
-let resizeBrowser = () =>  {
-    let widthBrowser = window.outerWidth;
-    console.log(widthBrowser);
-    
-    document.getElementById('muñeco').style.display = 'display';
-    if (widthBrowser < 1024 ){
-      
-        document.getElementById('output-text-area').style.display = 'none';
-        document.getElementById('muñeco').style.display = ' inline-block';
-        // document.getElementById('dinamic-container-id').style.display = 'flex';
-       
-    }
-    else if(widthBrowser > 1024){
-        // document.getElementById('output-text-area').style.display = 'flex';
-        // document.getElementById('muñeco').style.display = ' none';
-        document.getElementById('dinamic-container-id').style.display = ' none';
-    }
-   
+
+const keys = ['a', 'e', 'i', 'o', 'u'];
+let str;
+
+
+let encriptar = () => {
+
+
+    getText();
+
 }
 
 
-const activeModal = () =>{
-        
-    const screenWidth = screen.width;
-    const breakpoint = 1024;
+let getText = () => {
 
-    if (screenWidth < breakpoint) {
-        document.getElementById('dinamic-container-id').style.display = 'flex';
-       
+    let textAreas = ['textarea-desktop', 'textarea-movil']
+
+    for (let i = 0; i < textAreas.length; i++) {
+
+        document.getElementById(textAreas[i]).textContent = str;
+
     }
-   
-    if (screenWidth > breakpoint) {
-       document.getElementById('output-text-area').style.display = 'flex';
-       document.getElementById('muñeco').style.display = 'none';
 
-   }
+}
+
+
+let validacion = () => {
+
+    str = document.getElementById('input-area__text').value;
   
+    const regex = /[^a-z ]w?/g;
+
+    if (regex.exec(str)) {
+
+        alert('Solo se permiten minusculas y sin acentos')
+        eliminarTextoAdicional(str);
+
+    }
 
 }
 
-const closeModal = () =>{
- 
-    
-    document.getElementById('dinamic-container-id').style.display = 'none';
+let eliminarTextoAdicional = (strng) => {
+
+    str = strng.substring(0, strng.length - 1);
+    document.getElementById('input-area__text').value = str;
+
 }
-
-
-    
-

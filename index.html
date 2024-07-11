@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/d53937b053.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="modals.js"></script>
     <title>Encriptador A</title>
 </head>
 
@@ -22,13 +23,13 @@
                 <div class="encriptador__input-area">
                     <div class="encriptador__input-area__divisor">
                         <h1 class="input-area__title">Encriptador</h1>
-                        <textarea class="input-area__text-area" placeholder="Ingrese el texto aqui"></textarea>
+                        <textarea oninput="validacion()" id="input-area__text" class="input-area__text-area" placeholder="Ingrese el texto aqui" ></textarea>
                     </div>
                     <div>
                         <small class="input-area__waring-text"> <i class="fa-solid fa-circle-exclamation"
                                 style="color: #495057;"></i> Solo letras minúsculas y sin acentos</small>
                         <div class="input-area__buttons-container">
-                            <button onclick="activeModal()" class="input-area__buttons-container__button">
+                            <button onclick="activeModal(), encriptar()" class="input-area__buttons-container__button">
                                 Encriptar
                             </button>
                             <button class="input-area__buttons-container__button">
@@ -46,7 +47,7 @@
                             
 
                             <div  id="output-text-area" class="p" >
-                                <textarea class="dinamic-text-area"></textarea>
+                                <textarea   id="textarea-movil"  class="dinamic-text-area"></textarea>
                                 <button class="dinamic-button" >Copy</button>
                             </div>
                         
@@ -57,7 +58,7 @@
                                     <button onclick="closeModal()" class="moddal__close-button" type="submit">
                                         <i class="fa-solid fa-xmark"></i>
                                     </button>
-                                    <textarea class="moddal__text-area"></textarea>
+                                    <textarea id="textarea-desktop" class="moddal__text-area" ></textarea>
         
                                     <button class="moddal__copy-button">Copiar</button>
                                 </dialog>
