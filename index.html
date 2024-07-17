@@ -29,10 +29,10 @@
                         <small class="input-area__waring-text"> <i class="fa-solid fa-circle-exclamation"
                                 style="color: #495057;"></i> Solo letras minúsculas y sin acentos</small>
                         <div class="input-area__buttons-container">
-                            <button onclick="activeModal(), encriptar()" class="input-area__buttons-container__button">
+                            <button id="encriptar" onclick="activeModal(), encriptar()" class="input-area__buttons-container__button" disabled>
                                 Encriptar
                             </button>
-                            <button class="input-area__buttons-container__button">
+                            <button id="desencriptar" onclick="activeModal(), desencriptar() " class="input-area__buttons-container__button" disabled >
                                 Desencriptar
                             </button>
                         </div>
@@ -48,19 +48,19 @@
 
                             <div  id="output-text-area" class="p" >
                                 <textarea   id="textarea-movil"  class="dinamic-text-area"></textarea>
-                                <button class="dinamic-button" >Copy</button>
+                                <button onclick="copiarTxt()" class="dinamic-button" >Copy</button>
                             </div>
                         
 
                            
-                                <div id="dinamic-container-id" class=" container--dinamic-container">
+                            <div id="dinamic-container-id" class=" container--dinamic-container">
                                 <dialog open class="moddal">
                                     <button onclick="closeModal()" class="moddal__close-button" type="submit">
                                         <i class="fa-solid fa-xmark"></i>
                                     </button>
                                     <textarea id="textarea-desktop" class="moddal__text-area" ></textarea>
         
-                                    <button class="moddal__copy-button">Copiar</button>
+                                    <button onclick="copiarTxt()" class="moddal__copy-button">Copiar</button>
                                 </dialog>
                             </div>
                           

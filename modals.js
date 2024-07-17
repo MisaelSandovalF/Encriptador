@@ -1,48 +1,48 @@
+
+
+const breakpoint = 1024;
+let widthBrowser ;
+
 let resizeBrowser = () =>  {
-    
-    let widthBrowser = window.outerWidth;
-    console.log(widthBrowser);
+    widthBrowser = window.outerWidth
+   
     
     document.getElementById('muñeco').style.display = 'display';
-    if (widthBrowser < 1024 ){
+    if (widthBrowser < breakpoint ){
       
         document.getElementById('output-text-area').style.display = 'none';
-        document.getElementById('muñeco').style.display = ' inline-block';
-        
-       
+        document.getElementById('muñeco').style.display = ' inline-block';    
     }
-    else if(widthBrowser > 1024){
+    else {
      
         document.getElementById('dinamic-container-id').style.display = ' none';
     }
-   
 }
 
+let activeModal = () =>{
 
-const activeModal = () =>{
-        
-    const screenWidth = screen.width;
-    const breakpoint = 1024;
+    widthBrowser = window.outerWidth
+    
 
-    if (screenWidth < breakpoint) {
+
+    if (widthBrowser < breakpoint) {
         document.getElementById('dinamic-container-id').style.display = 'flex';
         
        
     }
    
-    if (screenWidth > breakpoint) {
+    if (widthBrowser > breakpoint) {
        document.getElementById('output-text-area').style.display = 'flex';
        document.getElementById('muñeco').style.display = 'none';
 
    }
-  
 
 }
 
-const closeModal = () =>{
- 
-    
+const closeModal = () =>{   
     document.getElementById('dinamic-container-id').style.display = 'none';
+    document.getElementById('input-area__text').value = "";
+        txtEncriptado = "";
 }
 
 
