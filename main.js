@@ -117,9 +117,19 @@ const copiarTxt = async() => {
 }
 
 
-const validacion = () => {
+const validacion = (event) => {
+ 
+    let string = event.target.value;
+    event.target.value = string.trimStart();
+    let x = event.target.value;
+
+
+
+
 
     str = document.getElementById('input-area__text').value;
+  
+    
     const regex = /[^a-z ]w?/g;
 
 
@@ -127,7 +137,7 @@ const validacion = () => {
 
 
 
-    if (regex.exec(str)) {
+    if (regex.exec(str) || !x ) {
         console.log('regex.exec(str) ', regex.exec(str));
 
         alert('Solo se permiten minusculas y sin acentos');
@@ -159,14 +169,14 @@ const validacion = () => {
 let eliminarTextoAdicional = (strng) => {
 
 
-
+   
 
     str = strng.substring(0, strng.length - 1);
     console.log('str', str);
 
-    if (str.length === 0) {
+    if (str.length === 0 ) {
 
-        console.log('ya la cague');
+ 
         document.getElementById('input-area__text').value = str;
         blockBttns();
     }
