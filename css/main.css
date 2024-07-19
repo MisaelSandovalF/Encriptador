@@ -35,10 +35,6 @@
 .header__img>img {
     padding-top: 1rem;
     width: 80px;
-    /**/
-    /* 
-    margin: 1rem 0 0 0; */
-
 }
 
 /* ----------------  Main --------------------------*/
@@ -113,19 +109,27 @@
     padding: 1rem;
     font-size: 1rem;
 
-    color: white;
     background-color: var(--main-color-text);
+    color: white;
+    box-shadow: 1px 5px 2px #868E96;
+
 }
 
 .input-area__buttons-container__button:disabled {
-    background-color: darkgray;
+   
+    background-color: #495057;
+    box-shadow: 1px 5px 2px #868E96;
+ 
     color: white;
-    cursor: not-allowed;
+    
 }
 
 .input-area__buttons-container__button:active {
-    background-color: lightblue;
+    /* background-color: #072B61; */
+    background-color: #0A3871;
     color: white;
+    box-shadow: none;
+
 }
 
 /* ----------------  Output Text Area --------------------------*/
@@ -190,22 +194,28 @@
 /*----------------------*/
 
 .output-area__name-developer {
+    font-size: 1.1rem;
     margin: 0.5rem;
+    color: black;
+    filter: drop-shadow(0px 2px 0px #ffffff);
+    text-shadow: 1px 1px 1.5px #000000;
 
-    color: var(--black-text);
 }
 
 .output-area__links a {
     margin-right: 1rem;
     text-decoration: none;
-
-    color: var(--black-text);
+    color: black;
+    filter: drop-shadow(0px 2px 0px #ffffff);
+    text-shadow: 0px 0.5px 1.5px #000000;
 }
 
 .output-area__links i {
     margin-right: 0.3rem;
 
-    color: var(--black-text);
+    filter: drop-shadow(0px 2px 0px #ffffff);
+    color: black;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 /* VENTANA MODAL*/
@@ -243,31 +253,68 @@
     width: 2rem;
     height: 2rem;
     color: white;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0.4rem;
+    
+     
     border-bottom-left-radius: 0.8rem;
     background-color: var(--main-color-text);
 
 }
 
-.moddal__text-area {
-    margin-top: 1rem;
+
+
+
+.moddal__text-area, .dinamic-text-area{
     width: 100%;
-    height: 90%;
+    height: 83%;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+   
+    
+    border: none;
+    background-color: transparent;
+
+    font-family: var(--secundary-font-text);
+    color: var(--secondary-color-text);
 }
 
-.moddal__copy-button {
-    width: 150px;
+.moddal__text-area::placeholder {
+    font-size: 1.5rem;
+
+    color: var(--secondary-color-text);
+}
+
+.moddal__text-area:focus-visible {
+    outline: none;
+}
+
+
+.moddal__text-area::placeholder {
+    font-size: 1.5rem;
+
+    color: var(--secondary-color-text);
+}
+
+.moddal__text-area:focus-visible {
+    outline: none;
+}
+
+
+
+.moddal__copy-button, .dinamic-button {
+    font-size: 1.2rem;
+    width: 80%;
     height: 3rem;
     color: white;
     border-radius: 0.3rem;
     margin: 1rem auto 0 auto;
 
     background-color: var(--main-color-text);
+
 }
 
 
-.p {
+.mini-footer {
     display: none;
     flex-direction: column;
     height: 100%;
@@ -383,11 +430,11 @@
         height: 80%;
     }
 
-    .dinamic-button {
+    /* .dinamic-button {
         width: 30%;
         height: 2rem;
         margin: 1.5rem 0 2rem 0;
-    }
+    } */
 
 
     /**/
